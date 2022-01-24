@@ -7,7 +7,7 @@ const descrip = ["Queso, piña, jamón", "Pan, carne, papas", "Arina, carne, pol
 
 require('./hbs/helpers');
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname+'/public'));
 
