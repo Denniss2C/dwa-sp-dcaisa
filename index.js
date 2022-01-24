@@ -1,10 +1,9 @@
 const express = require('express');
-//const res =require("espress/lib/response");
 const app = express();
 const hbs = require('hbs');
 const nombres = ["Pizza", "Hamburguesa", "Momo", "Crep", "Hot Dog", "Alitas"];
 const precios = ["$1.50", "$1.78", "$0.50", "$1.50", "$1.80", "$2.25"];
-const descrip = ["Queso, piña", "Pan, carne", "Arina, carne", "Fresas, crema, helado", "Salchicha, salsas", "BBQ, salteadas"];
+const descrip = ["Queso, piña, jamón", "Pan, carne, papas", "Arina, carne, pollo", "Fresas, crema, helado", "Salchicha, salsas, papas", "BBQ, salteadas, Mango"];
 
 require('./hbs/helpers');
 
@@ -16,12 +15,6 @@ app.use(express.static(__dirname+'/public'));
 app.set('view engine', 'hbs');
 
 hbs.registerPartials(__dirname + '/views/partials');
-/*
-app.get("/",(req,res)=>{
-    res.render("home",{
-        nombre:"Juan"
-    });
-});*/
 
 app.get('/', (req,res)=>{
     res.render("home",{
